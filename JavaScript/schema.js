@@ -24,16 +24,16 @@ const loadEntity = (schemaPath, name) => {
 
 const schema = {};
 
-schema.load = schemaPath => {
+schema.load = (schemaPath) => {
   fs.readdir(schemaPath, (err, files) => {
     if (err) return;
-    files.forEach(name => {
+    files.forEach((name) => {
       loadEntity(schemaPath, name);
     });
   });
   return schema;
 };
 
-schema.get = name => entities.get(name);
+schema.get = (name) => entities.get(name);
 
 module.exports = schema;

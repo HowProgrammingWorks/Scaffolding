@@ -24,16 +24,16 @@ const loadMethod = (apiPath, name) => {
 
 const api = {};
 
-api.load = apiPath => {
+api.load = (apiPath) => {
   fs.readdir(apiPath, (err, files) => {
     if (err) return;
-    files.forEach(name => {
+    files.forEach((name) => {
       loadMethod(apiPath, name);
     });
   });
   return api;
 };
 
-api.get = name => methods.get(name);
+api.get = (name) => methods.get(name);
 
 module.exports = api;
