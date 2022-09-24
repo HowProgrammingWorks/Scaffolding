@@ -18,7 +18,7 @@ const loadEntity = (schemaPath, name) => {
     const entity = require(filePath);
     entities.set(key, entity);
   } catch (e) {
-    entities.delete(name);
+    entities.delete(key);
   }
 };
 
