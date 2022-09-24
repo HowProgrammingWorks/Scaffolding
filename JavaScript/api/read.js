@@ -1,6 +1,6 @@
 'use strict';
 
-const fs = require('fs');
+const fs = require('node:fs');
 
 module.exports = async (id) => {
   const fileName = `./data/${parseInt(id)}.json`;

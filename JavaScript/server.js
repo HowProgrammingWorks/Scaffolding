@@ -1,7 +1,7 @@
 'use strict';
 
-const http = require('http');
-const fs = require('fs');
+const http = require('node:http');
+const fs = require('node:fs');
 
 require('./schema.js').load('./schema/');
 const api = require('./api.js').load('./api/');
