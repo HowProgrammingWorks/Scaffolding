@@ -18,7 +18,7 @@ const loadMethod = (apiPath, name) => {
     const method = require(filePath);
     methods.set(key, method);
   } catch (e) {
-    methods.delete(name);
+    methods.delete(key);
   }
 };
 
