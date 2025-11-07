@@ -27,5 +27,5 @@ module.exports = {
     unique: true,
     control: 'input',
     validate: (s) => s.includes('@'),
-  }
+  },
 };

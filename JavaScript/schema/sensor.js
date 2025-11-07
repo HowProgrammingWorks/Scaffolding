@@ -16,5 +16,5 @@ module.exports = {
     required: true,
     unique: true,
     control: 'input',
-  }
+  },
 };

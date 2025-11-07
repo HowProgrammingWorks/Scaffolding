@@ -11,13 +11,13 @@ const loadMethod = (apiPath, name) => {
   try {
     const libPath = require.resolve(filePath);
     delete require.cache[libPath];
-  } catch (e) {
+  } catch {
     return;
   }
   try {
     const method = require(filePath);
     methods.set(key, method);
-  } catch (e) {
+  } catch {
     methods.delete(name);
   }
 };

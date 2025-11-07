@@ -11,13 +11,13 @@ const loadEntity = (schemaPath, name) => {
   try {
     const modulePath = require.resolve(filePath);
     delete require.cache[modulePath];
-  } catch (e) {
+  } catch {
     return;
   }
   try {
     const entity = require(filePath);
     entities.set(key, entity);
-  } catch (e) {
+  } catch {
     entities.delete(key);
   }
 };
